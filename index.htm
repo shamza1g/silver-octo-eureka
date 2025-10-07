@@ -3,10 +3,12 @@
   <head><link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
-  <py-script output="output-area">
-print("Hello from PyScript!")
-    </py-script>
-
+  <py-script>
+from js import document
+p = document.createElement('p')
+p.innerHTML = "This text was added by Python."
+document.body.appendChild(p)
+</py-script>
     <div id="output-area"></div>
   <body>
     
